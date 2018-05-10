@@ -40,6 +40,10 @@ import static okhttp3.internal.Util.closeQuietly;
  * Manages reuse of HTTP and HTTP/2 connections for reduced network latency. HTTP requests that
  * share the same {@link Address} may share a {@link Connection}. This class implements the policy
  * of which connections to keep open for future use.
+ *
+ * 管理HTTP和HTTP / 2连接的重用以减少网络延迟。
+ * 共享相同{@link地址}的HTTP请求可能共享{@link Connection}。
+ * 这个类实现了哪些连接保持打开以供将来使用的策略。
  */
 public final class ConnectionPool {
   /**

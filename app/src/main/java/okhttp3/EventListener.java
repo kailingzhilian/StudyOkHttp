@@ -25,6 +25,7 @@ import javax.annotation.Nullable;
 /**
  * Listener for metrics events. Extend this class to monitor the quantity, size, and duration of
  * your application's HTTP calls.
+ * 度量事件的监听器。 扩展此类以监控应用程序HTTP调用的数量，大小和持续时间
  *
  * <h3>Warning: This is a non-final API.</h3>
  *
@@ -290,6 +291,9 @@ public abstract class EventListener {
    * change, and the implementation is incomplete. We expect that OkHttp 3.11 or 3.12 will finalize
    * this API. Until then, expect API and behavior changes when you update your OkHttp
    * dependency.</strong>
+   *
+   * 从OkHttp 3.10开始，此功能是一个不稳定的预览：API可能会更改，并且实现不完整。 我们预计OkHttp 3.11或3.12将最终确定此API。
+   * 在此之前，当您更新您的OkHttp依赖关系时，请期待API和行为更改。
    */
   public interface Factory {
     /**

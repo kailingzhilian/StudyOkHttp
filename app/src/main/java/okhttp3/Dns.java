@@ -25,8 +25,12 @@ import java.util.List;
  * {@linkplain #SYSTEM system DNS service}, which is the default. Some applications may provide
  * their own implementation to use a different DNS server, to prefer IPv6 addresses, to prefer IPv4
  * addresses, or to force a specific known IP address.
+ * 解析主机名IP地址的域名服务。 大多数应用程序将使用默认的{SYSTEM系统DNS服务}。
+ * 某些应用程序可能会提供自己的实现来使用不同的DNS服务器，以选择IPv6地址，优先选择IPv4地址，
+ * 或强制使用特定的已知IP地址。
  *
  * <p>Implementations of this interface must be safe for concurrent use.
+ * 这个接口的实现对于并发使用必须是安全的
  */
 public interface Dns {
   /**

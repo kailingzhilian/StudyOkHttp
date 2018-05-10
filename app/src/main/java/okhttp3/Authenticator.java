@@ -23,6 +23,9 @@ import javax.annotation.Nullable;
  * Implementations may either attempt to satisfy the challenge by returning a request that includes
  * an authorization header, or they may refuse the challenge by returning null. In this case the
  * unauthenticated response will be returned to the caller that triggered it.
+ * 响应来自远程Web服务器或代理服务器的身份验证质询。
+ * 实现可以通过返回包含授权头的请求来尝试满足盘问，或者他们可以通过返回null来拒绝盘问。
+ * 在这种情况下，未经身份验证的响应将返回给触发它的调用者。
  *
  * <p>Implementations should check if the initial request already included an attempt to
  * authenticate. If so it is likely that further attempts will not be useful and the authenticator

@@ -34,6 +34,8 @@ import static okhttp3.internal.Util.equal;
  * Constrains which certificates are trusted. Pinning certificates defends against attacks on
  * certificate authorities. It also prevents connections through man-in-the-middle certificate
  * authorities either known or unknown to the application's user.
+ * 约束哪些证书是可信的。 固定证书可防御证书颁发机构的攻击。
+ * 它还防止通过应用程序用户知道或未知的中间人认证中心进行连接。
  *
  * <p>This class currently pins a certificate's Subject Public Key Info as described on <a
  * href="http://goo.gl/AIx3e5">Adam Langley's Weblog</a>. Pins are either base64 SHA-256 hashes as
