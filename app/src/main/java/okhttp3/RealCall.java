@@ -53,9 +53,11 @@ final class RealCall implements Call {
     private boolean executed;
 
     private RealCall(OkHttpClient client, Request originalRequest, boolean forWebSocket) {
+        //我们构建的OkHttpClient，用来传递参数
         this.client = client;
         this.originalRequest = originalRequest;
         this.forWebSocket = forWebSocket;
+        //构建RetryAndFollowUpInterceptor拦截器
         this.retryAndFollowUpInterceptor = new RetryAndFollowUpInterceptor(client, forWebSocket);
     }
 

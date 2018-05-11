@@ -54,16 +54,19 @@ public final class Dispatcher {
 
     /**
      * Ready async calls in the order they'll be run.
+     * 按照它们将运行的顺序准备好异步调用。
      */
     private final Deque<AsyncCall> readyAsyncCalls = new ArrayDeque<>();
 
     /**
      * Running asynchronous calls. Includes canceled calls that haven't finished yet.
+     * 运行异步调用。 包括尚未完成的取消calls。
      */
     private final Deque<AsyncCall> runningAsyncCalls = new ArrayDeque<>();
 
     /**
      * Running synchronous calls. Includes canceled calls that haven't finished yet.
+     * 运行同步调用。 包括尚未完成的取消calls
      */
     private final Deque<RealCall> runningSyncCalls = new ArrayDeque<>();
 

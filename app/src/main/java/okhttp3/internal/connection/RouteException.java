@@ -22,6 +22,7 @@ import java.lang.reflect.Method;
 /**
  * An exception thrown to indicate a problem connecting via a single Route. Multiple attempts may
  * have been made with alternative protocols, none of which were successful.
+ * 抛出异常以指示通过单个路由连接的问题。。许多尝试都可能采用了替代协议，但没有一项是成功的。
  */
 public final class RouteException extends RuntimeException {
   private static final Method addSuppressedExceptionMethod;
