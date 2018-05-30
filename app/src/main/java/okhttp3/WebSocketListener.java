@@ -52,6 +52,7 @@ public abstract class WebSocketListener {
    * Invoked when a web socket has been closed due to an error reading from or writing to the
    * network. Both outgoing and incoming messages may have been lost. No further calls to this
    * listener will be made.
+   *
    */
   public void onFailure(WebSocket webSocket, Throwable t, @Nullable Response response) {
   }

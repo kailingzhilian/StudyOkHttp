@@ -64,6 +64,8 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
     /**
      * How many redirects and auth challenges should we attempt? Chrome follows 21 redirects; Firefox,
      * curl, and wget follow 20; Safari follows 16; and HTTP/1.0 recommends 5.
+     * *我们应该尝试多少次重定向和认证挑战？
+     * Chrome遵循21次重定向; Firefox，curl和wget遵循20; Safari遵循16; HTTP / 1.0建议5
      */
     private static final int MAX_FOLLOW_UPS = 20;
 
@@ -86,6 +88,14 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
      * <p>This method is safe to be called concurrently, but provides limited guarantees. If a
      * transport layer connection has been established (such as a HTTP/2 stream) that is terminated.
      * Otherwise if a socket connection is being established, that is terminated.
+     * <p>
+     * 如果当前持有，立即关闭套接字连接。
+     * 使用它来中断来自任何线程的正在进行的请求。
+     * 关闭请求主体和响应主体流是调用者的责任; 否则资源可能会泄露。
+     * <p>
+     * <p>此方法可安全地同时调用，但提供有限的保证。
+     * 如果传输层连接已建立（例如HTTP / 2流）已终止。
+     * 否则，如果套接字连接正在建立，则终止。
      */
     public void cancel() {
         canceled = true;

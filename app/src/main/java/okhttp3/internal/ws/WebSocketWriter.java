@@ -224,6 +224,7 @@ final class WebSocketWriter {
       buffer.write(source, byteCount);
 
       // Determine if this is a buffered write which we can defer until close() flushes.
+      //确定这是否是缓冲写入，我们可以推迟到close（）刷新。
       boolean deferWrite = isFirstFrame
           && contentLength != -1
           && buffer.size() > contentLength - 8192 /* segment size */;

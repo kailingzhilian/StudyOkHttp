@@ -138,6 +138,13 @@ public final class Dispatcher {
      * returned. Synchronous calls become idle once {@link Call#execute() execute()} returns. This
      * means that if you are doing synchronous calls the network layer will not truly be idle until
      * every returned {@link Response} has been closed.
+     * <p>
+     * *每当调度程序变为空闲时（当运行调用的数量返回到零时），设置要调用的回调。
+     * <p>
+     * 注意：根据是否运行{@linkplain异步调用＃排队（回调）}或{@linkplain同步调用＃执行（），认为{@linkplain Call call}被认为空闲的时间不同。。
+     * 在{@link Callback＃onResponse onResponse}或{@link Callback＃onFailure onFailure}回调已返回后，异步呼叫变得闲置。
+     * {@link Call＃execute（）execute（）}返回后，同步调用变为空闲状态。
+     * 这意味着，如果您正在进行同步呼叫，则在每个返回的{@link Response}已关闭之前，网络层将不会真正闲置。
      */
     public synchronized void setIdleCallback(@Nullable Runnable idleCallback) {
         this.idleCallback = idleCallback;
